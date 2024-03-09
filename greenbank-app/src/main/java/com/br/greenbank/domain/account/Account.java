@@ -1,27 +1,33 @@
-package com.br.greenbank.domain;
+package com.br.greenbank.domain.account;
 
+import com.br.greenbank.domain.merchant.Merchant;
+import com.br.greenbank.domain.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.UuidGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
 @Table(name = "tb_bank_account")
-public class BankAccount implements IAccount, Serializable {
+public class Account implements IAccount, Serializable {
 
         private static final long serialVersionUID = 1L;
+        private static final Logger logger = LoggerFactory.getLogger(Account.class);
 
         @Id
         @UuidGenerator(style = UuidGenerator.Style.TIME)
         private UUID id;
 
         @Column(unique = true, name = "bank_account_number")
-        private Long accountNumber;
+        private int accountNumber;
         @Column(name = "bank_account_balance")
-        private double balance;
+        private BigDecimal balance;
 
         @JsonIgnore
         @OneToOne
@@ -34,19 +40,19 @@ public class BankAccount implements IAccount, Serializable {
         private Merchant merchant;
 
 
-        public BankAccount(Long accountNumber, double balance, User user) {
+        public Account(UUID accountId, int accountNumber, BigDecimal balance, User user) {
             this.accountNumber = accountNumber;
             this.balance = balance;
             this.user = user;
         }
 
-        public BankAccount(Long accountNumber, double balance, Merchant merchant) {
+        public Account(UUID accountId, int accountNumber, BigDecimal balance, Merchant merchant) {
             this.accountNumber = accountNumber;
             this.balance = balance;
             this.merchant = merchant;
         }
 
-        public BankAccount() {}
+        public Account() {}
 
         public UUID getId() {
                 return id;
@@ -56,19 +62,19 @@ public class BankAccount implements IAccount, Serializable {
                 this.id = id;
         }
 
-        public Long getAccountNumber() {
+        public int getAccountNumber() {
                 return accountNumber;
         }
 
-        public void setAccountNumber(Long accountNumber) {
+        public void setAccountNumber(int accountNumber) {
                 this.accountNumber = accountNumber;
         }
 
-        public double getBalance() {
+        public BigDecimal getBalance() {
                 return balance(balance);
         }
 
-        public void setBalance(double balance) {
+        public void setBalance(BigDecimal balance) {
                 this.balance = balance;
         }
 
@@ -89,19 +95,25 @@ public class BankAccount implements IAccount, Serializable {
         }
 
         @Override
-        public void deposit(double value) {
-            this.balance += value;
+        public void deposit(BigDecimal value) {
+            this.balance = this.balance.add(value);
         }
 
         @Override
-        public void withdraw(double value) {
-            this.balance -= value;
+        public void withdraw(BigDecimal value) {
+                if (this.balance.compareTo(value) < 0) {
+                        logger.error("Insufficient funds");
+                        throw new IllegalArgumentException("Insufficient funds");
+                }
+            this.balance = this.balance.subtract(value);
         }
 
         @Override
-        public double balance(double balance) {
-                if (balance < 0) throw new IllegalArgumentException("Balance must not be negative");
-                System.out.println("Balance: " + balance);
+        public BigDecimal balance(BigDecimal balance) {
+                if (balance.compareTo(BigDecimal.ZERO) < 0)
+                        throw new IllegalArgumentException("Insufficient funds");
+
+                logger.info(String.format("Balance: $1%s", balance));
                 return balance;
         }
 
@@ -110,7 +122,7 @@ public class BankAccount implements IAccount, Serializable {
         public boolean equals(Object o) {
                 if (this == o) return true;
                 if (o == null || getClass() != o.getClass()) return false;
-                BankAccount that = (BankAccount) o;
+                Account that = (Account) o;
                 return Objects.equals(id, that.id);
         }
 
