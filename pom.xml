@@ -16,9 +16,6 @@
 	<description>Green Bank Challenge</description>
     <modules>
         <module>common</module>
-		<module>user</module>
-		<module>account</module>
-		<module>merchant</module>
 		<module>greenbank-app</module>
 	</modules>
     <properties>
@@ -103,6 +100,7 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
+		<!-- LOOGER -->
 	</dependencies>
 
 	<build>

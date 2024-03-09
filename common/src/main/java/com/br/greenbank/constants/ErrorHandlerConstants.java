@@ -4,6 +4,7 @@ public class ErrorHandlerConstants {
 
     /** User error messages **/
     public static final String USER_NOT_FOUND = "User not found";
+    public static final String USER_ALREADY_EXISTS = "Ops, this user already exists";
 
     /** Merchant error messages **/
     public static final String MERCHANT_NOT_FOUND = "Merchant not found";
@@ -18,4 +19,5 @@ public class ErrorHandlerConstants {
     public static final String INVALID_EMAIL = "Invalid email";
     public static final String EMAIL_ALREADY_EXISTS = "Email already exists";
     public static final String NATIONAL_ID_ALREADY_EXISTS = "National ID already exists";
+    public static final String ERROR_ON_CREATING_ACCOUNT = "Error on creating account";
 }

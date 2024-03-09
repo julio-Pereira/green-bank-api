@@ -16,18 +16,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>com.br.greenbank</groupId>
-            <artifactId>account</artifactId>
-            <version>24.1.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.br.greenbank</groupId>
-            <artifactId>user</artifactId>
-            <version>24.1.1</version>
-            <scope>compile</scope>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

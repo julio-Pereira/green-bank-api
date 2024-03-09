@@ -1,9 +1,9 @@
 package com.br.greenbank.config;
 
-import com.br.greenbank.domain.Merchant;
-import com.br.greenbank.domain.User;
-import com.br.greenbank.repository.MerchantRepository;
-import com.br.greenbank.repository.UserRepository;
+import com.br.greenbank.domain.merchant.Merchant;
+import com.br.greenbank.domain.user.User;
+import com.br.greenbank.repository.merchant.MerchantRepository;
+import com.br.greenbank.repository.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
