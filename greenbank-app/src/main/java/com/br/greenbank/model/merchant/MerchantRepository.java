@@ -1,6 +1,5 @@
 package com.br.greenbank.model.merchant;
 
-import com.br.greenbank.domain.merchant.Merchant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

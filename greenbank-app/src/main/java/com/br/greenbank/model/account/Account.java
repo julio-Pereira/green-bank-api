@@ -1,7 +1,8 @@
-package com.br.greenbank.domain.account;
+package com.br.greenbank.model.account;
 
-import com.br.greenbank.domain.merchant.Merchant;
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.domain.account.IAccount;
+import com.br.greenbank.model.merchant.Merchant;
+import com.br.greenbank.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.UuidGenerator;

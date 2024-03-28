@@ -1,6 +1,6 @@
 package user;
 
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.model.user.User;
 import com.br.greenbank.enums.CustomerType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

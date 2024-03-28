@@ -1,7 +1,6 @@
 package com.br.greenbank.controller.account;
 
-import com.br.greenbank.domain.account.Account;
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.model.account.Account;
 import com.br.greenbank.service.account.AccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

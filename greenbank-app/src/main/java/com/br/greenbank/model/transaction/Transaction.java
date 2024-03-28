@@ -1,7 +1,8 @@
-package com.br.greenbank.domain.transaction;
+package com.br.greenbank.model.transaction;
 
-import com.br.greenbank.domain.merchant.Merchant;
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.domain.transaction.ITransaction;
+import com.br.greenbank.model.merchant.Merchant;
+import com.br.greenbank.model.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

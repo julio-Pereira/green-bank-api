@@ -1,7 +1,7 @@
 package com.br.greenbank.domain.transaction;
 
-import com.br.greenbank.domain.merchant.Merchant;
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.model.merchant.Merchant;
+import com.br.greenbank.model.user.User;
 
 import java.math.BigDecimal;
 

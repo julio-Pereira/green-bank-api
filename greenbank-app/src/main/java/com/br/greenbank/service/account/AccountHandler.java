@@ -1,7 +1,8 @@
 package com.br.greenbank.service.account;
 
-import com.br.greenbank.domain.account.Account;
+import com.br.greenbank.model.account.Account;
 import com.br.greenbank.dto.account.UserAccountDto;
+import com.br.greenbank.model.account.IAccount;
 
 import java.math.BigDecimal;
 import java.util.Random;

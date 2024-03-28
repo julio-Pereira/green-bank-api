@@ -1,6 +1,6 @@
 package com.br.greenbank.controller.merchant;
 
-import com.br.greenbank.domain.merchant.Merchant;
+import com.br.greenbank.model.merchant.Merchant;
 import com.br.greenbank.dto.merchant.CreateMerchantDto;
 import com.br.greenbank.dto.merchant.MerchantEmailDto;
 import com.br.greenbank.dto.merchant.MerchantNameDto;

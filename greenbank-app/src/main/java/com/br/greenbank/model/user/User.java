@@ -1,8 +1,8 @@
-package com.br.greenbank.domain.user;
+package com.br.greenbank.model.user;
 
 
-import com.br.greenbank.domain.account.Account;
-import com.br.greenbank.domain.transaction.Transaction;
+import com.br.greenbank.model.account.Account;
+import com.br.greenbank.model.transaction.Transaction;
 import com.br.greenbank.enums.CustomerType;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

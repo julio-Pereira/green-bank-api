@@ -1,7 +1,6 @@
 package com.br.greenbank.model.account;
 
 
-import com.br.greenbank.domain.account.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

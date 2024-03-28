@@ -1,7 +1,7 @@
 package com.br.greenbank.config;
 
-import com.br.greenbank.domain.merchant.Merchant;
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.model.merchant.Merchant;
+import com.br.greenbank.model.user.User;
 import com.br.greenbank.model.merchant.MerchantRepository;
 import com.br.greenbank.model.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;

@@ -1,6 +1,6 @@
 package com.br.greenbank.controller.user;
 
-import com.br.greenbank.domain.user.User;
+import com.br.greenbank.model.user.User;
 import com.br.greenbank.dto.user.CreateUserDto;
 import com.br.greenbank.dto.user.UpdateUserDto;
 import com.br.greenbank.dto.user.UserEmailDto;
