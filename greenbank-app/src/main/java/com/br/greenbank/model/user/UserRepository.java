@@ -1,4 +1,4 @@
-package com.br.greenbank.repository.user;
+package com.br.greenbank.model.user;
 
 import com.br.greenbank.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;

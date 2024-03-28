@@ -7,7 +7,7 @@ import com.br.greenbank.dto.user.UserEmailDto;
 import com.br.greenbank.dto.user.UserNameDto;
 import com.br.greenbank.dto.user.UserPasswordDto;
 import com.br.greenbank.exceptions.UserExistsException;
-import com.br.greenbank.repository.user.UserRepository;
+import com.br.greenbank.model.user.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.br.greenbank.constants.ErrorHandlerConstants.EMAIL_ALREADY_EXISTS;
 import static com.br.greenbank.constants.ErrorHandlerConstants.EMPTY_EMAIL;
 import static com.br.greenbank.constants.ErrorHandlerConstants.EMPTY_NAME;
 import static com.br.greenbank.constants.ErrorHandlerConstants.EMPTY_NEW_PASSWORD;

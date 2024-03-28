@@ -1,4 +1,4 @@
-package com.br.greenbank.repository.account;
+package com.br.greenbank.model.account;
 
 
 import com.br.greenbank.domain.account.Account;

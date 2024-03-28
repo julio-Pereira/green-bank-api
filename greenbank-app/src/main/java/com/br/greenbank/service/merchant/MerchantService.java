@@ -6,7 +6,7 @@ import com.br.greenbank.dto.merchant.MerchantEmailDto;
 import com.br.greenbank.dto.merchant.MerchantNameDto;
 import com.br.greenbank.dto.merchant.MerchantPasswordDto;
 import com.br.greenbank.dto.merchant.UpdateMerchantDto;
-import com.br.greenbank.repository.merchant.MerchantRepository;
+import com.br.greenbank.model.merchant.MerchantRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
